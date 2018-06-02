@@ -66,7 +66,7 @@
   </p>
 
   <br><br><br><br>
-  <input type="submit" value="Checkout">
+  <button id="checkout">Checkout</button>
   </div>
 
   <div class="orderconf">
@@ -74,14 +74,23 @@
   Order Confirmation
   </p>
   <p class="border">
+  You ordered "Pepsi" amount of Pepsi.<br>
+  You ordered "Coke" amount of Coke.<br>
+  You ordered "Mountain_Dew" amount of Mountain Dew.<br>
+  If this infomration is correct please proceed.
+  <br><br>
+  <button id="proceed">Proceed to Payment</button>
+  </div>
   
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-  
+  $("div.orderconf").hide();
+  $("div.info").hide();
+  $("button#Checkout").on("click", function() {
+    $("div.merch").hide();
+    $("div.orderconf").FadeIn();
   </script>
   </body>
 </html>
-
- 
