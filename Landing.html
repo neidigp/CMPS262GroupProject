@@ -74,9 +74,9 @@
   Order Confirmation
   </p>
   <p class="border">
-  You ordered "Pepsi" amount of Pepsi.<br>
-  You ordered "Coke" amount of Coke.<br>
-  You ordered "Mountain_Dew" amount of Mountain Dew.<br>
+  You ordered <output name="Pepsi"></output> amount of Pepsi.<br>
+  You ordered <output name="Coke"></output> amount of Coke.<br>
+  You ordered <output name="Mountain_Dew"> amount of Mountain Dew.<br>
   If this infomration is correct please proceed.
   <br><br>
   <button id="proceed">Proceed to Payment</button>
@@ -91,7 +91,7 @@
   $("button#Checkout").on("click", function() {
     $("div.merch").hide();
     $("div.orderconf").FadeIn();
-  }
+    }
   </script>
   </body>
 </html>
