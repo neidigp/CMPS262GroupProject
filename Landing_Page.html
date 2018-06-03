@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StoreFront</title>
+
+    <script src="scripts/jquery-3.3.1.min.js" > </script>
+    <script src="scripts/product.js" > </script>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+  <h1>The Soda Stop</h1>
+  <br>
+  <br>
+  <br>
+
+  <div class="merch">
+  <p class="bold">
+  Products
+  </p>
+  <br>
+  <table class="border" id="product_container">
+    <col width="130">
+  <script type="text/javascript">
+    var productList = new ProductList();
+    var index;
+      $("#product_container").append(productList.getProductTable());
+  </script>
+  </table>
+
+  <br><br><br><br>
+  <button id="checkout">Checkout</button>
+  </div>
+
+  <div class="orderconf" visibility = >
+  <p class="bold">
+  Order Confirmation
+  </p>
+  <p class="border">
+  You ordered <output name="Pepsi"></output> amount of Pepsi.<br>
+  You ordered <output name="Coke"></output> amount of Coke.<br>
+  You ordered <output name="Mountain_Dew"> amount of Mountain Dew.<br>
+  If this infomration is correct please proceed.
+  <br><br>
+  <button id="proceed">Proceed to Payment</button>
+  </div>
+
+  <div class="info">
+  <p class="bold">
+  Payment Information Submission
+  </p>
+  <p class="border">
+  First Name:
+  <input type="text" name="First_Name" size="10" maxlength="25"><br>
+  Last Name:
+  <input type="text" name="Last_Name" size="10" maxlength="25"><br>
+  Address:
+  <input type="text" name="Address" size="30" maxlength="30"><br>
+  Credit Card Number:
+  <input type="text" name="CCNum" size="20" maxlength="30"><br>
+  After reviewing your order please confirm purchase.
+  <br><br>
+  <button id="Purchase">Purchase</button>
+  </div>
+
+
+
+  <script>
+  $(function(){ //on page load
+    $("#orderconf").hide();
+    $("#info").hide();
+  });
+
+  $( "#checkout" ).click(function() {
+    $("div.merch").hide();
+    $("div.orderconf").FadeIn();
+    $( this ).slideUp();
+  });
+   
+  </script>
+  
+  </body>
+</html>
