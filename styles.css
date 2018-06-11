@@ -28,7 +28,6 @@
 
     div.info {
         text-align: center;
-        visibility: hidden;
     }
 
 
@@ -37,7 +36,6 @@
     }
 
     div.orderconf { 
-        visibility: hidden;
         text-align: center;
     }
 
