@@ -1,3 +1,4 @@
+    <style>
     p {
         font-family: Georgia, "Times New Roman", Times, serif;
         text-align: center;
@@ -16,17 +17,9 @@
       border-radius: 10px;
       border: 6px double black;
       padding: .2em;
-      width:300px;
-      height:300px;
-      background-color:#d9d9d9;
-      position:fixed;
-      margin-left:-150px; /* half of width */
-      margin-top:-150px;  /* half of height */
-      top:50%;
-      left:50%;
     }
 
-    div.info {
+    .info {
         text-align: center;
     }
 
@@ -35,7 +28,7 @@
         text-align: center;
     }
 
-    div.orderconf { 
+    .orderconf { 
         text-align: center;
     }
 
