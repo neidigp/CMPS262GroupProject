@@ -20,7 +20,7 @@
   Products
   </p>
   <br>
-  <table class="border" id="product_container">
+  <table class="border" id="product_container" text-align: center>
     <col width="130">
   <script type="text/javascript">
     var productList = new ProductList();
@@ -33,7 +33,7 @@
   <button id="checkout">Checkout</button>
   </div>
 
-  <div class="orderconf" visibility = >
+  <div class="orderconf">
   <p class="bold">
   Order Confirmation
   </p>
@@ -71,11 +71,14 @@
     $("#orderconf").hide();
     $("#info").hide();
   });
-
   $( "#checkout" ).click(function() {
     $("div.merch").hide();
     $("div.orderconf").FadeIn();
     $( this ).slideUp();
+  });
+  $( "proceed").click(function(){
+    $("div.orderconf").hide();
+    $("div.info").FadeIn();
   });
    
   </script>
