@@ -61,7 +61,7 @@
   Credit Card Number:
   <input type="text" name="CCNum" size="20" maxlength="30"><br>
   After reviewing your order please confirm purchase.
-   </p>
+  </p>
   <br><br>
   <button id="Purchase">Purchase</button>
   </div>
@@ -70,19 +70,18 @@
 
   <script>
 
-  $("div.orderconf").hide();
-  $("div.info").hide();
+  $("#orderconf").hide();
+  $("#info").hide();
   
   $( "button#checkout" ).on("click" function() {
-    $("div.merch").hide();
+    $("div").hide();
     $("div.orderconf").FadeIn();
   });
   $( "button#proceed").on("click" function(){
-    $("div.orderconf").hide();
+    $("div").hide();
     $("div.info").FadeIn();
   });
 
-  </script>
 
   </body>
 </html>
