@@ -1,0 +1,36 @@
+    p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    p.bold {
+      font-weight: bolder;
+    }
+
+    p.border {
+      border-radius: 10px;
+      border: 6px double black;
+      padding: .2em;
+    }
+
+    div.info {
+        text-align: center;
+        visibility: hidden;
+    }
+
+
+    .merch {
+        text-align: center;
+    }
+
+    div.orderconf { 
+        visibility: hidden;
+        text-align: center;
+    }
+
+    </style>
