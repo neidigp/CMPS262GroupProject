@@ -69,20 +69,19 @@
 
   <script>
   $(function(){ //on page load
-    $("#orderconf").hide();
-    $("#info").hide();
+    $("div.orderconf").hide();
+    $("div.info").hide();
   });
-  $( "#checkout" ).click(function() {
+  $( "button#checkout" ).on("click" function() {
     $("div.merch").hide();
     $("div.orderconf").FadeIn();
-    $( this ).slideUp();
   });
-  $( "proceed").click(function(){
+  $( "button#proceed").on("click" function(){
     $("div.orderconf").hide();
     $("div.info").FadeIn();
   });
-   
+
   </script>
-  
+
   </body>
 </html>
