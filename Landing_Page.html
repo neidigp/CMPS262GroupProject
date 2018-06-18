@@ -3,46 +3,9 @@
   <head>
     <title>StoreFront</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-    <style type="text/css">
-
-    p {font-family: Georgia, "Times New Roman", Times, serif;
-      text-align: center;
-      }
-
-    h1 {
-      font-size: 2.5em;
-      text-align: center;
-    }
-
-    p.bold {
-      font-weight: bolder;
-    }
-
-    p.border {
-      border-radius: 10px;
-      border: 6px double black;
-      padding: .2em;
-    }
-
-
-    .merch{
-    text-align: center;
-    }
-
-    .orderconf{
-    text-align: center;
-
-    }
-
-    .info{
-    text-align: center;
-
-    }
-
-    </style>
+    <script src="scripts/jquery-3.3.1.min.js" > </script>
+    <script src="scripts/product.js" > </script>
+    <link rel="stylesheet" href="styles.css">
 
   </head>
   <body>
@@ -57,22 +20,20 @@
   Products
   </p>
   <br>
-  <p class="border">
-  Pepsi   Qty:
-  <input type="number" name="Pepsi" size="3" maxlength="4"><br><br>
-  Coke    Qty:
-  <input type="number" name="Coke" size="3" maxlength="4"><br><br>
-  Mountain Dew   Qty:
-  <input type="number" name="Mountain_Dew" size="3" maxlength="4"><br><br>
-
-  Enter the quantity you wish to purchase and proceed to checkout.
-  </p>
+  <table class="border" id="product_container">
+    <col width="130">
+  <script type="text/javascript">
+    var productList = new ProductList();
+    var index;
+      $("#product_container").append(productList.getProductTable());
+  </script>
+  </table>
 
   <br><br><br><br>
   <button id="checkout">Checkout</button>
   </div>
 
-  <div class="orderconf">
+  <div class="orderconf" visibility = >
   <p class="bold">
   Order Confirmation
   </p>
@@ -106,14 +67,18 @@
 
 
   <script>
-  $("div.orderconf").hide();
-  $("div.info").hide();
-  $("button#Checkout").on("click", function() {
+  $(function(){ //on page load
+    $("#orderconf").hide();
+    $("#info").hide();
+  });
+
+  $( "#checkout" ).click(function() {
     $("div.merch").hide();
     $("div.orderconf").FadeIn();
-    }
-  $("button#proceed").on("click", function(){
-    $("div.info").FadeIn();
-  }
+    $( this ).slideUp();
+  });
+   
+  </script>
+  
   </body>
 </html>
